@@ -14,18 +14,13 @@ ON ci.country_id = co.country_id
 WHERE co.country = 'United States';
 
 -- 3. Lấy ra các địa chỉ của thành phố Hanoi
-SELECT ad.address
+SELECT ad.address as 'Address in Hanoi'
 FROM city ci
 INNER JOIN country co
 ON ci.country_id = co.country_id
 INNER JOIN address ad
 ON ci.city_id = ad.city_id
 WHERE ci.city = 'Hanoi';
-
-select * from address
-where city_id = 201;
-select * from city
-where city = 'Hanoi';
 
 -- 4. Lấy ra tên, mô tả, tên category của các bộ phim có rating = R
 SELECT f.title, f.description, c.name
